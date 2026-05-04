@@ -21,6 +21,8 @@ let oldsValues = [
     currentMinutes,
 ]
 
+var j = 0;
+
 function check() {
     dateObject = new Date();
     today = dateObject.getDay();
@@ -30,6 +32,7 @@ function check() {
     if (today !== oldsValues[0]) {
         oldsValues[0] = today;  
         verifyDay();
+        j++;
     };
 
     // if (idToday !== oldsValues[1]) {
@@ -40,7 +43,10 @@ function check() {
     if (currentMinutes !== oldsValues[2]) {
         oldsValues[2] = currentMinutes;
         verifyHour();
+        j++;
     }
+
+    if (j >= 50) window.location.reload();
 }
 
 const intervalToUpdate = 1 * 100;
