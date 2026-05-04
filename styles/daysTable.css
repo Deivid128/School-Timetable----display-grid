@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    height: 70vh;
+    min-height: 90vh;
+    width: 100%;
+
+    margin: 10px;
+
+    border: #171717 solid 4px;
+    border-radius: 10px;
+
+    background-color: #c3c3c3;
+}
+
+.day, .subject {
+    margin: 8px;    
+
+    border: 2px solid #000;
+    border-radius: 5px;
+
+    font-size: larger;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.day {
+    padding: 5px;
+    background-color: #719e9f;
+    margin-bottom: 20px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    width: 100%;
+    min-height: 50px;
+}
+
+.schedule {
+    display: grid;  
+    grid-auto-flow: column;
+    
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 18% 18% 18% 9% 18% 18%;
+
+    height: 100%;
+    width: 100%;
+}

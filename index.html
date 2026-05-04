@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de aulas da minha escola.</title>
+    <link rel="stylesheet" href="styles/mainStyle.css">
+    <link rel="stylesheet" href="styles/daysTable.css">
+    <link rel="stylesheet" href="styles/scheduleStyles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="days">
+            <div class="day" id="segunda_feira"><h3>Segunda-Feira</h3></div>
+            <div class="day" id="terca_feira"><h3>Terça-Feira</h3></div>
+            <div class="day" id="quarta_feira"><h3>Quarta-Feira</h3></div>
+            <div class="day" id="quinta_feira"><h3>Quinta-Feira</h3></div>
+            <div class="day" id="sexta_feira"><h3>Sexta-Feira</h3></div>
+        </header>
+        <main class="schedule"></main>
+    </div>
+
+    <script src="scripts/schedule.js"></script>
+    <script src="scripts/dateObjectUpdaterHandler.js"></script>
+    <script src="scripts/hours.js"></script>
+    <script src="scripts/today.js"></script>
+
+    <!-- <script>
+        let dateObject = new Date();
+        let hour_minute_second = dateObject.getSeconds();
+        let oldValue = hour_minute_second;
+        
+        setInterval(() => {
+            dateObject = new Date();
+            hour_minute_second = dateObject.getSeconds();
+
+            if (hour_minute_second != oldValue) {
+                oldValue = hour_minute_second
+                console.log(oldValue);
+            };
+
+        }, 100);
+        
+    </script> -->
+</body>
+
+</html>
