@@ -17,14 +17,9 @@ var currentMinutes = dateObject.getHours() * 60 + dateObject.getMinutes();
 
 let oldsValues = [
     today,
-    idToday,
+    // idToday,
     currentMinutes,
 ]
-
-function update() {
-    verifyDay();
-    verifyHour();
-}
 
 function check() {
     dateObject = new Date();
@@ -34,17 +29,17 @@ function check() {
     
     if (today !== oldsValues[0]) {
         oldsValues[0] = today;  
-        update();
+        verifyDay();
     };
 
-    if (idToday !== oldsValues[1]) {
-        oldsValues[1] = idToday;
-        update();
-    };
+    // if (idToday !== oldsValues[1]) {
+    //     oldsValues[1] = idToday;
+    //     update();
+    // };
 
     if (currentMinutes !== oldsValues[2]) {
         oldsValues[2] = currentMinutes;
-        update();
+        verifyHour();
     }
 }
 
