@@ -1,6 +1,6 @@
 Potuguês (BR): 
 
-Criei uma tabela funcional que mostra os dias de aula (da minha turma), as turmas, o dia específico em que estamos e a turma específica em que estamos. Pode haver alguns erros, mas não será um grande problema.
+Criei uma tabela funcional que mostra os dias de aula (da minha turma), as aulas, o dia específico em que estamos e a turma específica em que estamos. Pode haver alguns erros, mas não será um grande problema.
 
 Inicialmente, o projeto seria apenas um exercício com display grid, mas evoluiu para isso.
 
