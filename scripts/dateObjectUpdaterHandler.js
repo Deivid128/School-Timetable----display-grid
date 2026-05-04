@@ -26,11 +26,11 @@ var j = 0;
 function check() {
     dateObject = new Date();
     today = dateObject.getDay();
-    idToday = days[today];
     currentMinutes = dateObject.getHours() * 60 + dateObject.getMinutes();
     
     if (today !== oldsValues[0]) {
         oldsValues[0] = today;  
+        idToday = days[today];
         verifyDay();
         j++;
     };
