@@ -4,16 +4,15 @@ function setDayDivStyle(element) {
     element.classList.add("todaySelect");
 }
 
-function changeDay(day) {
-    const dayName = days[day];
-    const todayDiv = document.getElementById(dayName);
+function changeDay() {
+    const todayDiv = document.getElementById(idToday);
     setDayDivStyle(todayDiv);
 }
 
 function verifyDay() {
     console.log("Chamado verifyDay");
 
-    changeDay(today);
+    changeDay();
 }
 
 verifyDay();
