@@ -42,8 +42,6 @@ function verifyHour() {
             if (needReplace) replaceDaysDivs();
             getDiv(index);
             return;
-        } else if (index === 5 && currentMinutes >= start && currentMinutes < end) {
-            window.location.reload();
         };
     });
 }
