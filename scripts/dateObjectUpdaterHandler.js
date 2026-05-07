@@ -1,5 +1,7 @@
 let dateObject = new Date();
 
+let TodayClassesFinish = false; 
+
 const days = [
     "domingo",
     "segunda_feira",
@@ -11,19 +13,18 @@ const days = [
 ]
 
 let today = dateObject.getDay();
-// let today = 1;
 var idToday = days[today];
 var currentMinutes = dateObject.getHours() * 60 + dateObject.getMinutes();
 
 let oldsValues = [
     today,
-    // idToday,
     currentMinutes,
 ]
 
 var j = 0;
 
 function check() {
+    
     dateObject = new Date();
     today = dateObject.getDay();
     currentMinutes = dateObject.getHours() * 60 + dateObject.getMinutes();
@@ -33,12 +34,14 @@ function check() {
         idToday = days[today];
         verifyDay();
         j++;
+        TodayClassesFinish = false;
     };
 
-    // if (idToday !== oldsValues[1]) {
-    //     oldsValues[1] = idToday;
-    //     update();
-    // };
+    if (TodayClassesFinish) {
+        console.log("a");
+        
+        return;
+    };
 
     if (currentMinutes !== oldsValues[2]) {
         oldsValues[2] = currentMinutes;
@@ -51,4 +54,4 @@ function check() {
 
 const intervalToUpdate = 1 * 100;
 
-setInterval(check, intervalToUpdate);
+var interval = setInterval(check, intervalToUpdate);

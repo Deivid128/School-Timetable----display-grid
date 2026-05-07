@@ -8,7 +8,7 @@ const Hours = [
     { start: "14:40", end: "15:30" },
     { start: "15:30", end: "15:50" },
     { start: "16:00", end: "16:40" },
-    { start: "16:40", end: "17:30" },
+    { start: "16:40", end: "18:11" },
 ]
 
 function styleDiv(element) {
@@ -41,6 +41,9 @@ function verifyHour() {
         if (currentMinutes >= start && currentMinutes < end) {
             if (needReplace) replaceDaysDivs();
             getDiv(index);
+            return;
+        } else if (index == 5 && currentMinutes >= start && currentMinutes > end) {
+            TodayClassesFinish = true;
             return;
         };
     });

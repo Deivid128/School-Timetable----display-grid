@@ -12,6 +12,8 @@ function changeDay() {
 function verifyDay() {
     console.log("Chamado verifyDay");
 
+    replaceDaysDivs();
+
     changeDay();
 }
 
